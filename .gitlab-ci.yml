@@ -4,11 +4,9 @@ stages:
 
 jupyter-build:
   stage: build
-  image: ubuntu:latest
+  image: python:slim
   script:
-    - apt update -y
-    - apt install python3-pip -y
-    - pip install -r requirements.txt
+    - pip install -U jupyter-book
     - jupyter-book clean docs
     - jupyter-book build docs
   artifacts:
