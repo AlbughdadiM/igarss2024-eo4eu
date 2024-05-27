@@ -1,0 +1,30 @@
+other_data
+lai
+T31TCJ_20220905T105619_stack.*
+*.tif
+patch*.txt
+# Ignore Python cache directories
+__pycache__/
+.DS_Store
+# Ignore other typical Python artifacts
+*.pyc
+*.pyo
+*.pyd
+*.pdb
+*.egg-info/
+*.eggs/
+*.env/
+*.venv/
+ENV/
+env/
+venv/
+.venv/
+
+# Ignore Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Ignore virtual environment directories
+venv/
+ENV/
+env/
+.venv/

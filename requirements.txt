@@ -1,0 +1,10 @@
+jupyter-book
+matplotlib==3.7.1
+numpy==1.26.4
+gdown==5.2.0
+tifffile==2022.10.10
+geopandas==0.12.2
+requests==2.31.0
+gdown==5.2.0
+Pillow==9.3.0
+rasterio
