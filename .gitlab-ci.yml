@@ -7,7 +7,7 @@ jupyter-build:
   image: ubuntu:latest
   script:
     - apt update -y
-    - apt install python3-pip
+    - apt install python3-pip -y
     - pip install -r requirements.txt
     - jupyter-book clean docs
     - jupyter-book build docs
