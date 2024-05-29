@@ -1,0 +1,1327 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Crop Monitoring &#8212; EO4EU IGARSS 2024</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'crop_monitoring';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Object Segmentation and Detection" href="object_detection.html" />
+    <link rel="prev" title="Examples of Processing APIs in EO4EU" href="processing_apis.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="eo4eu_intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/eo4eu-logo.png" class="logo__image only-light" alt="EO4EU IGARSS 2024 - Home"/>
+    <script>document.write(`<img src="_static/eo4eu-logo.png" class="logo__image only-dark" alt="EO4EU IGARSS 2024 - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="eo4eu_intro.html">
+                    EO4EU Tutorial IGARSS 2024
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="processing_apis.html">Examples of Processing APIs in EO4EU</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Crop Monitoring</a></li>
+<li class="toctree-l1"><a class="reference internal" href="object_detection.html">Object Segmentation and Detection</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/AlbughdadiM/igarss2024-eo4eu" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/AlbughdadiM/igarss2024-eo4eu/issues/new?title=Issue%20on%20page%20%2Fcrop_monitoring.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/crop_monitoring.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Crop Monitoring</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#field-ndvi-maps">Field NDVI Maps</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#leaf-area-index-for-a-whole-sentinel-2-tile">Leaf Area Index for a Whole Sentinel-2 Tile</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#required-imports">Required imports</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#urls-of-the-apis-to-be-used">URLs of the APIs to be used</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#headers-for-the-api-requests">Headers for the API requests</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-directory">Data directory</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#workflow1-field-ndvi-maps">WORKFLOW1 Field NDVI Maps</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-shapefile-on-qgis-to-define-the-roi-in-epsg-4326-then-read-this-file-and-convert-the-geomerty-to-xy-coordinates-to-prepare-for-the-api-call">Create a shapefile on QGIS to define the ROI in EPSG 4326. Then read this file and convert the geomerty to xy coordinates to prepare for the API call</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#call-the-sentinel-api-to-get-rgb-images-of-the-roi-the-required-parameters-are">Call the Sentinel API to get RGB images of the ROI. The required parameters are:</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#monitor-task-status">Monitor task status</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#get-results-using-task-id">Get results using task ID</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#save-results-from-signed-url-to-local-files">Save results from signed URL to local files</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#visualize-results">Visualize results</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#segment-the-obtained-image-using-automatic-sam-segmentation-mode-the-required-parameters-are">Segment the obtained image using automatic SAM segmentation mode. The required parameters are</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Monitor task status</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Get results using task ID</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#download-results-from-signed-url-to-local-files">Download results from signed URL to local files</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Visualize results</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#polygonize-segmentation-mask">Polygonize segmentation mask</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#filter-polygons-with-surface-less-that-100000">Filter polygons with surface less that 100000</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#select-randomly-two-fields-from-the-filtered-geodataframe">Select randomly two fields from the filtered GeoDataFrame</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#for-each-polygon-field-send-a-post-request-to-sentinel-api-to-get-ndvi-in-2023-with-10-cloud-cover">For each polygon (field), send a POST request to Sentinel API to get NDVI in 2023 with 10% cloud cover</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#monitor-tasks-status">Monitor tasks status</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#save-results-to-local-files">Save results to local files</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#visualize-ndvi-maps-to-monitor-crops">Visualize NDVI Maps to monitor crops</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#workflow-2-leaf-area-index-estimation">WORKFLOW 2 Leaf Area Index Estimation</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#send-a-request-to-the-sentinel-api-to-prepare-a-tile-with-stack-of-bands">Send a request to the Sentinel API to prepare a tile with stack of bands</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Monitor task status</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#get-results">Get results</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#send-a-post-request-to-the-lai-api">Send a POST request to the LAI API</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#check-status-of-the-submitted-task">Check status of the submitted task</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#get-processing-results">Get processing results</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#save-results-to-local-file">Save results to local file</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#visualize-lai-results">Visualize LAI results</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="crop-monitoring">
+<h1>Crop Monitoring<a class="headerlink" href="#crop-monitoring" title="Link to this heading">#</a></h1>
+<p>The objective of this use case is to monitor agricultural fields using a workflow that integrates user’s code and EO4EU APIs (SAM and Sentinel-2 APIs).</p>
+<section id="field-ndvi-maps">
+<h2>Field NDVI Maps<a class="headerlink" href="#field-ndvi-maps" title="Link to this heading">#</a></h2>
+<p>1- Create an ROI that contains the fields of interest using QGIS in EPSG 4326. This ROI will be used to download images from the Sentinel-2 API.</p>
+<p>2- Segment the ROI to detect the boundaries of these fields using SAM API.</p>
+<p>3- Polygonize the returned results to obtain a polygon per field.</p>
+<p>4- Filter small fields using area.</p>
+<p>5- Remove polygons of urban areas using QGIS.</p>
+<p>6- Obtain the NDVI for each field for a full year from the Sentinel-2 API.</p>
+</section>
+<section id="leaf-area-index-for-a-whole-sentinel-2-tile">
+<h2>Leaf Area Index for a Whole Sentinel-2 Tile<a class="headerlink" href="#leaf-area-index-for-a-whole-sentinel-2-tile" title="Link to this heading">#</a></h2>
+<p>1- Prepare a Sentinel-2 band stack for a tile using the Sentinel2 API.</p>
+<p>2- Send a requests with the S3 location of the image to estimate LAI for a full tile.</p>
+<section id="required-imports">
+<h3>Required imports<a class="headerlink" href="#required-imports" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>import os
+import requests
+import json
+import tifffile as tiff
+import geopandas as gpd
+import numpy as np
+from matplotlib import pyplot as plt
+import matplotlib.colors as mcolors
+from utils import geometry_to_coords,get_filename_from_url,save_image_from_url,raster_to_shapefile
+plt.ion()
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;contextlib.ExitStack at 0x104385270&gt;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="urls-of-the-apis-to-be-used">
+<h3>URLs of the APIs to be used<a class="headerlink" href="#urls-of-the-apis-to-be-used" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>sentinel_api = &quot;http://sentinel-api-test.dev.apps.eo4eu.eu&quot;
+lai_api = &quot;http://lai-api-test.dev.apps.eo4eu.eu&quot;
+sam_api = &quot;http://sam-api-test.dev.apps.eo4eu.eu&quot;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="headers-for-the-api-requests">
+<h3>Headers for the API requests<a class="headerlink" href="#headers-for-the-api-requests" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>headers = {
+    &#39;accept&#39;: &#39;application/json&#39;,
+    &#39;access-token&#39;: &#39;YOUR API KEY&#39;,
+    &#39;Content-Type&#39;: &#39;application/json&#39;
+}
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="data-directory">
+<h3>Data directory<a class="headerlink" href="#data-directory" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>data_path = &quot;data/crop_monitoring&quot;
+os.makedirs(data_path,exist_ok=True)
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="workflow1-field-ndvi-maps">
+<h3>WORKFLOW1 Field NDVI Maps<a class="headerlink" href="#workflow1-field-ndvi-maps" title="Link to this heading">#</a></h3>
+<section id="create-a-shapefile-on-qgis-to-define-the-roi-in-epsg-4326-then-read-this-file-and-convert-the-geomerty-to-xy-coordinates-to-prepare-for-the-api-call">
+<h4>Create a shapefile on QGIS to define the ROI in EPSG 4326. Then read this file and convert the geomerty to xy coordinates to prepare for the API call<a class="headerlink" href="#create-a-shapefile-on-qgis-to-define-the-roi-in-epsg-4326-then-read-this-file-and-convert-the-geomerty-to-xy-coordinates-to-prepare-for-the-api-call" title="Link to this heading">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>roi_gdf = gpd.read_file(&quot;data/crop_monitoring/ROI/roi_fields.shp&quot;)
+geometry = roi_gdf.geometry.iloc[0]
+coords = geometry_to_coords(geometry)
+coords
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[2.5413447239224496, 48.24090398712013],
+ [2.5413447239224496, 48.272903987120124],
+ [2.5893447239224496, 48.272903987120124],
+ [2.5893447239224496, 48.24090398712013],
+ [2.5413447239224496, 48.24090398712013]]
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="call-the-sentinel-api-to-get-rgb-images-of-the-roi-the-required-parameters-are">
+<h4>Call the Sentinel API to get RGB images of the ROI. The required parameters are:<a class="headerlink" href="#call-the-sentinel-api-to-get-rgb-images-of-the-roi-the-required-parameters-are" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p>Geometry</p></li>
+<li><p>Start date</p></li>
+<li><p>End date</p></li>
+<li><p>Cloud cover</p></li>
+<li><p>Index</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>data = {
+    &quot;geometry&quot;:coords,
+    &quot;start_date&quot;:&quot;2023-06-01&quot;,
+    &quot;end_date&quot;:&quot;2023-09-01&quot;,
+    &quot;cloud_cover&quot;:&quot;10&quot;,
+    &quot;index&quot;:&quot;RGB&quot;  
+}
+response = requests.post(os.path.join(sentinel_api,&quot;api/v1/s2l2a/roi/process&quot;), headers=headers, json=data)
+print(response.text)
+task_id = json.loads(response.content.decode())
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&quot;task_id&quot;:&quot;c42f0b49-1e66-43e3-b387-2c828f162701&quot;}
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="monitor-task-status">
+<h4>Monitor task status<a class="headerlink" href="#monitor-task-status" title="Link to this heading">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>params = {&#39;task_id&#39;: task_id[&quot;task_id&quot;]}
+response = requests.get(os.path.join(sentinel_api,&quot;api/v1/task/status&quot;), headers=headers, params=params)
+print(response.text)
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&quot;task_id&quot;:&quot;c42f0b49-1e66-43e3-b387-2c828f162701&quot;,&quot;state&quot;:&quot;SUCCESS&quot;,&quot;result&quot;:&quot;[{&#39;image&#39;: &#39;L2/tiles/31/U/DP/S2A_MSIL2A_20230614T105031_N0509_R051_T31UDP_20230614T163601.SAFE&#39;, &#39;processed&#39;: True, &#39;url&#39;: &#39;https://object-store.os-api.cci1.ecmwf.int/MoBucket/c42f0b49-1e66-43e3-b387-2c828f162701/T31UDP_20230614T105031_RGB.tif?AWSAccessKeyId=e850aff0dd5749a0a8df9f909014049c&amp;Signature=%2F2ieMjxzB19MvXpv0hJHrH58jzg%3D&amp;Expires=1717008265&#39;, &#39;uri&#39;: &#39;s3://MoBucket/c42f0b49-1e66-43e3-b387-2c828f162701/T31UDP_20230614T105031_RGB.tif&#39;}]&quot;}
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="get-results-using-task-id">
+<h4>Get results using task ID<a class="headerlink" href="#get-results-using-task-id" title="Link to this heading">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>params = {&#39;task_id&#39;: task_id[&quot;task_id&quot;]}
+response = requests.get(os.path.join(sentinel_api,&quot;api/v1/s2l2a/roi/process&quot;), headers=headers, params=params)
+results = response.json()
+print (results)
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;results&#39;: [{&#39;image&#39;: &#39;L2/tiles/31/U/DP/S2A_MSIL2A_20230614T105031_N0509_R051_T31UDP_20230614T163601.SAFE&#39;, &#39;processed&#39;: True, &#39;url&#39;: &#39;https://object-store.os-api.cci1.ecmwf.int/MoBucket/c42f0b49-1e66-43e3-b387-2c828f162701/T31UDP_20230614T105031_RGB.tif?AWSAccessKeyId=e850aff0dd5749a0a8df9f909014049c&amp;Signature=%2F2ieMjxzB19MvXpv0hJHrH58jzg%3D&amp;Expires=1717008265&#39;, &#39;uri&#39;: &#39;s3://MoBucket/c42f0b49-1e66-43e3-b387-2c828f162701/T31UDP_20230614T105031_RGB.tif&#39;}]}
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="save-results-from-signed-url-to-local-files">
+<h4>Save results from signed URL to local files<a class="headerlink" href="#save-results-from-signed-url-to-local-files" title="Link to this heading">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>rgb_output_path = os.path.join(data_path,&quot;rgb_images&quot;)
+os.makedirs(rgb_output_path,exist_ok=True)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>list_downloaded_imgs = []
+for res in results[&quot;results&quot;]:
+    file_name = get_filename_from_url(res[&quot;url&quot;])
+    output_file_path = os.path.join(rgb_output_path,file_name)
+    save_image_from_url(res[&quot;url&quot;],output_file_path)
+    list_downloaded_imgs.append(output_file_path)
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Image successfully saved to data/crop_monitoring/rgb_images/T31UDP_20230614T105031_RGB.tif
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="visualize-results">
+<h4>Visualize results<a class="headerlink" href="#visualize-results" title="Link to this heading">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>num_images = len(list_downloaded_imgs)
+cols = 3  
+rows = (num_images // cols) + (num_images % cols &gt; 0) 
+plt.figure(figsize=(15, 5 * rows)) 
+for i, image_path in enumerate(list_downloaded_imgs):
+    if not os.path.exists(image_path):
+        print(f&quot;Image not found: {image_path}&quot;)
+        continue
+    img = tiff.imread(image_path)
+    plt.subplot(rows, cols, i + 1)
+    plt.imshow(img.astype(&quot;uint8&quot;))
+    plt.axis(&#39;off&#39;) 
+    plt.title(os.path.basename(image_path))
+plt.tight_layout()
+plt.show()
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/315a7cd9bebe948ccbe173622e2aa41e94f085890cef1f3165bdacecefddec07.png" src="_images/315a7cd9bebe948ccbe173622e2aa41e94f085890cef1f3165bdacecefddec07.png" />
+</div>
+</div>
+</section>
+<section id="segment-the-obtained-image-using-automatic-sam-segmentation-mode-the-required-parameters-are">
+<h4>Segment the obtained image using automatic SAM segmentation mode. The required parameters are<a class="headerlink" href="#segment-the-obtained-image-using-automatic-sam-segmentation-mode-the-required-parameters-are" title="Link to this heading">#</a></h4>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="s2">&quot;list_images&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="s2">&quot;image_name&quot;</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+      <span class="s2">&quot;image_uri&quot;</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+      <span class="s2">&quot;stability_score&quot;</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
+      <span class="s2">&quot;pred_iou_thresh&quot;</span><span class="p">:</span> <span class="nb">float</span>
+    <span class="p">}</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>rgb_img_uri = results[&quot;results&quot;][0][&quot;uri&quot;]
+data ={
+  &quot;list_images&quot;: [
+    {
+      &quot;image_name&quot;: os.path.basename(rgb_img_uri),
+      &quot;image_uri&quot;: rgb_img_uri,
+      &quot;stability_score&quot;: 0.85,
+      &quot;pred_iou_thresh&quot;: 0.85
+    }
+  ]
+}
+response = requests.post(os.path.join(sam_api,&quot;api/v1/automatic&quot;),headers=headers,json=data)
+print (response.text)
+task_id = json.loads(response.content.decode())
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&quot;task_id&quot;:&quot;46c11076-1cbe-4568-80ba-88dc7512cdea&quot;}
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id1">
+<h4>Monitor task status<a class="headerlink" href="#id1" title="Link to this heading">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>params = {&#39;task_id&#39;: task_id[&quot;task_id&quot;]}
+response = requests.get(os.path.join(sam_api,&quot;api/v1/task/status&quot;), headers=headers, params=params)
+print(response.text)
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&quot;task_id&quot;:&quot;46c11076-1cbe-4568-80ba-88dc7512cdea&quot;,&quot;state&quot;:&quot;SUCCESS&quot;,&quot;result&quot;:&quot;[{&#39;image_uri&#39;: &#39;s3://MoBucket/c42f0b49-1e66-43e3-b387-2c828f162701/T31UDP_20230614T105031_RGB.tif&#39;, &#39;processed&#39;: True, &#39;png_result_url&#39;: &#39;https://object-store.os-api.cci1.ecmwf.int/MoBucket/46c11076-1cbe-4568-80ba-88dc7512cdea/T31UDP_20230614T105031_RGB_automatic_mask.png?AWSAccessKeyId=e850aff0dd5749a0a8df9f909014049c&amp;Signature=lvg%2Bt00PfV%2BDLWoYXYth8cmwEeY%3D&amp;Expires=1717008395&#39;, &#39;png_result_uri&#39;: &#39;s3://MoBucket/46c11076-1cbe-4568-80ba-88dc7512cdea/T31UDP_20230614T105031_RGB_automatic_mask.png&#39;, &#39;tif_result_url&#39;: &#39;https://object-store.os-api.cci1.ecmwf.int/MoBucket/46c11076-1cbe-4568-80ba-88dc7512cdea/T31UDP_20230614T105031_RGB_automatic_mask.tif?AWSAccessKeyId=e850aff0dd5749a0a8df9f909014049c&amp;Signature=2JY2042UrW7lVaT33Hq7IcCyyG0%3D&amp;Expires=1717008395&#39;, &#39;tif_result_uri&#39;: &#39;s3://MoBucket/46c11076-1cbe-4568-80ba-88dc7512cdea/T31UDP_20230614T105031_RGB_automatic_mask.tif&#39;}]&quot;}
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id2">
+<h4>Get results using task ID<a class="headerlink" href="#id2" title="Link to this heading">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>params = {&#39;task_id&#39;: task_id[&quot;task_id&quot;]}
+response = requests.get(os.path.join(sam_api,&quot;api/v1/prompt&quot;), headers=headers, params=params)
+results = response.json()
+print (results)
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;results&#39;: [{&#39;image_uri&#39;: &#39;s3://MoBucket/c42f0b49-1e66-43e3-b387-2c828f162701/T31UDP_20230614T105031_RGB.tif&#39;, &#39;processed&#39;: True, &#39;png_result_url&#39;: &#39;https://object-store.os-api.cci1.ecmwf.int/MoBucket/46c11076-1cbe-4568-80ba-88dc7512cdea/T31UDP_20230614T105031_RGB_automatic_mask.png?AWSAccessKeyId=e850aff0dd5749a0a8df9f909014049c&amp;Signature=lvg%2Bt00PfV%2BDLWoYXYth8cmwEeY%3D&amp;Expires=1717008395&#39;, &#39;png_result_uri&#39;: &#39;s3://MoBucket/46c11076-1cbe-4568-80ba-88dc7512cdea/T31UDP_20230614T105031_RGB_automatic_mask.png&#39;, &#39;tif_result_url&#39;: &#39;https://object-store.os-api.cci1.ecmwf.int/MoBucket/46c11076-1cbe-4568-80ba-88dc7512cdea/T31UDP_20230614T105031_RGB_automatic_mask.tif?AWSAccessKeyId=e850aff0dd5749a0a8df9f909014049c&amp;Signature=2JY2042UrW7lVaT33Hq7IcCyyG0%3D&amp;Expires=1717008395&#39;, &#39;tif_result_uri&#39;: &#39;s3://MoBucket/46c11076-1cbe-4568-80ba-88dc7512cdea/T31UDP_20230614T105031_RGB_automatic_mask.tif&#39;}]}
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="download-results-from-signed-url-to-local-files">
+<h4>Download results from signed URL to local files<a class="headerlink" href="#download-results-from-signed-url-to-local-files" title="Link to this heading">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>segmentation_output_path = os.path.join(data_path,&quot;sam_segmentation&quot;)
+os.makedirs(segmentation_output_path,exist_ok=True)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>sam_output_tif_path = os.path.join(segmentation_output_path,&quot;auto_mask.tif&quot;)
+save_image_from_url(results[&quot;results&quot;][0][&quot;tif_result_url&quot;],sam_output_tif_path)
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Image successfully saved to data/crop_monitoring/sam_segmentation/auto_mask.tif
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id3">
+<h4>Visualize results<a class="headerlink" href="#id3" title="Link to this heading">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>rgb_img = tiff.imread(list_downloaded_imgs[0])
+msk_img = tiff.imread(sam_output_tif_path)
+plt.figure(figsize=(10, 5))
+plt.subplot(1, 2, 1)
+plt.imshow(rgb_img.astype(&quot;uint8&quot;))
+plt.axis(&#39;off&#39;)
+plt.title(&#39;Original Image&#39;)
+
+plt.subplot(1, 2, 2)
+plt.imshow(rgb_img.astype(&quot;uint8&quot;))
+plt.imshow(msk_img.astype(&quot;uint8&quot;), cmap=&#39;jet&#39;, alpha=0.5)
+plt.axis(&#39;off&#39;)
+plt.title(&#39;Mask Overlay&#39;)
+plt.tight_layout()
+plt.show()
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/5ea6e9c95b1a20dc4b29cfb5a06b58debf4c3b236be69f18b214a4dc3c8d585c.png" src="_images/5ea6e9c95b1a20dc4b29cfb5a06b58debf4c3b236be69f18b214a4dc3c8d585c.png" />
+</div>
+</div>
+</section>
+<section id="polygonize-segmentation-mask">
+<h4>Polygonize segmentation mask<a class="headerlink" href="#polygonize-segmentation-mask" title="Link to this heading">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>shapefile_path = os.path.join(segmentation_output_path,&quot;auto_mask.shp&quot;)
+raster_to_shapefile(sam_output_tif_path, shapefile_path)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>gdf = gpd.read_file(shapefile_path)
+num_polygons = len(gdf)
+colors = [&#39;#{:06x}&#39;.format(np.random.randint(0, 256**3)) for _ in range(num_polygons)]
+gdf.plot(color=colors, edgecolor=&#39;black&#39;)
+plt.title(&#39;Shapefile Plot&#39;)
+plt.xlabel(&#39;Longitude&#39;)
+plt.ylabel(&#39;Latitude&#39;)
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(79.6722222222222, 0.5, &#39;Latitude&#39;)
+</pre></div>
+</div>
+<img alt="_images/b9c2dd8904708478f2d1a3189523be7a8bd49f667c4dcff49e7b9df9f0d06c2e.png" src="_images/b9c2dd8904708478f2d1a3189523be7a8bd49f667c4dcff49e7b9df9f0d06c2e.png" />
+</div>
+</div>
+</section>
+<section id="filter-polygons-with-surface-less-that-100000">
+<h4>Filter polygons with surface less that 100000<a class="headerlink" href="#filter-polygons-with-surface-less-that-100000" title="Link to this heading">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>threshold_area = 100000.0  
+gdf[&#39;area&#39;] = gdf.geometry.area
+gdf_filtered = gdf[gdf[&#39;area&#39;] &gt; threshold_area]
+gdf_filtered = gdf_filtered.drop(columns=[&#39;area&#39;])
+num_polygons = len(gdf_filtered)
+colors = [&#39;#{:06x}&#39;.format(np.random.randint(0, 256**3)) for _ in range(num_polygons)]
+gdf_filtered.plot(color=colors, edgecolor=&#39;black&#39;)
+plt.title(&#39;Shapefile Plot&#39;)
+plt.xlabel(&#39;Longitude&#39;)
+plt.ylabel(&#39;Latitude&#39;)
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(78.63692810457515, 0.5, &#39;Latitude&#39;)
+</pre></div>
+</div>
+<img alt="_images/b64bc7413ff5a709a409674d432a272852dce48bd02a1879821ec08a8c80b445.png" src="_images/b64bc7413ff5a709a409674d432a272852dce48bd02a1879821ec08a8c80b445.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>gdf_filtered.to_file(os.path.join(segmentation_output_path,&quot;filtered_mask.shp&quot;))
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>fields_gdf = gpd.read_file(os.path.join(segmentation_output_path,&quot;filtered_mask.shp&quot;))
+fields_gdf[&#39;geometry&#39;] = fields_gdf.geometry.simplify(tolerance=10, preserve_topology=True)
+fields_gdf = fields_gdf.to_crs(&quot;EPSG:4326&quot;)
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="select-randomly-two-fields-from-the-filtered-geodataframe">
+<h4>Select randomly two fields from the filtered GeoDataFrame<a class="headerlink" href="#select-randomly-two-fields-from-the-filtered-geodataframe" title="Link to this heading">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>random_rows = fields_gdf.sample(n=3, random_state=7)
+colors = [&#39;#{:06x}&#39;.format(np.random.randint(0, 256**3)) for _ in range(len(random_rows))]
+random_rows.plot(color=colors, edgecolor=&#39;black&#39;)
+plt.title(&#39;Shapefile Plot&#39;)
+plt.xlabel(&#39;Longitude&#39;)
+plt.ylabel(&#39;Latitude&#39;)
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(133.13343274568425, 0.5, &#39;Latitude&#39;)
+</pre></div>
+</div>
+<img alt="_images/740f0b8e5331eb863b0977568a762b07c9e1c8ba63b6b09ff35c751d9251c6cf.png" src="_images/740f0b8e5331eb863b0977568a762b07c9e1c8ba63b6b09ff35c751d9251c6cf.png" />
+</div>
+</div>
+</section>
+<section id="for-each-polygon-field-send-a-post-request-to-sentinel-api-to-get-ndvi-in-2023-with-10-cloud-cover">
+<h4>For each polygon (field), send a POST request to Sentinel API to get NDVI in 2023 with 10% cloud cover<a class="headerlink" href="#for-each-polygon-field-send-a-post-request-to-sentinel-api-to-get-ndvi-in-2023-with-10-cloud-cover" title="Link to this heading">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>list_tasks = []
+for idx, row in random_rows.iterrows():
+    coords = geometry_to_coords(row[&#39;geometry&#39;])
+    data = {
+    &quot;geometry&quot;:coords,
+    &quot;start_date&quot;:&quot;2023-01-01&quot;,
+    &quot;end_date&quot;:&quot;2023-12-31&quot;,
+    &quot;cloud_cover&quot;:&quot;10&quot;,
+    &quot;index&quot;:&quot;NDVI&quot;  
+    }
+    response = requests.post(os.path.join(sentinel_api,&quot;api/v1/s2l2a/roi/process&quot;), headers=headers, json=data)
+    print(response.text)
+    task_id = json.loads(response.content.decode())
+    list_tasks.append(task_id[&quot;task_id&quot;])   
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&quot;task_id&quot;:&quot;7145cb80-1020-42d2-9321-23a75a0be9a9&quot;}
+{&quot;task_id&quot;:&quot;1dce9d65-2206-40de-9a29-93b98d7ba0c6&quot;}
+{&quot;task_id&quot;:&quot;df0c632e-2451-46f5-9a64-ffe29787529b&quot;}
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="monitor-tasks-status">
+<h4>Monitor tasks status<a class="headerlink" href="#monitor-tasks-status" title="Link to this heading">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>for idx, task_id in enumerate(list_tasks):
+    print (idx)
+    params = {&#39;task_id&#39;: task_id}
+    response = requests.get(os.path.join(sentinel_api,&quot;api/v1/task/status&quot;), headers=headers, params=params)
+    print(response.text)
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
+{&quot;task_id&quot;:&quot;7145cb80-1020-42d2-9321-23a75a0be9a9&quot;,&quot;state&quot;:&quot;SUCCESS&quot;,&quot;result&quot;:&quot;[{&#39;image&#39;: &#39;L2/tiles/31/U/DP/S2B_MSIL2A_20231007T104829_N0509_R051_T31UDP_20231007T135731.SAFE&#39;, &#39;processed&#39;: True, &#39;url&#39;: &#39;https://object-store.os-api.cci1.ecmwf.int/MoBucket/7145cb80-1020-42d2-9321-23a75a0be9a9/T31UDP_20231007T104829_NDVI.tif?AWSAccessKeyId=e850aff0dd5749a0a8df9f909014049c&amp;Signature=nNNamvzs6cmZkJ%2Fr%2FnrWDwK6034%3D&amp;Expires=1717008571&#39;, &#39;uri&#39;: &#39;s3://MoBucket/7145cb80-1020-42d2-9321-23a75a0be9a9/T31UDP_20231007T104829_NDVI.tif&#39;}, {&#39;image&#39;: &#39;L2/tiles/31/U/DP/S2A_MSIL2A_20230604T104621_N0509_R051_T31UDP_20230604T165401.SAFE&#39;, &#39;processed&#39;: True, &#39;url&#39;: &#39;https://object-store.os-api.cci1.ecmwf.int/MoBucket/7145cb80-1020-42d2-9321-23a75a0be9a9/T31UDP_20230604T104621_NDVI.tif?AWSAccessKeyId=e850aff0dd5749a0a8df9f909014049c&amp;Signature=mgEzcQgcc5yVSQYnPbMmhAoYGbA%3D&amp;Expires=1717008581&#39;, &#39;uri&#39;: &#39;s3://MoBucket/7145cb80-1020-42d2-9321-23a75a0be9a9/T31UDP_20230604T104621_NDVI.tif&#39;}, {&#39;image&#39;: &#39;L2/tiles/31/U/DP/S2B_MSIL2A_20230907T104629_N0509_R051_T31UDP_20230907T153138.SAFE&#39;, &#39;processed&#39;: True, &#39;url&#39;: &#39;https://object-store.os-api.cci1.ecmwf.int/MoBucket/7145cb80-1020-42d2-9321-23a75a0be9a9/T31UDP_20230907T104629_NDVI.tif?AWSAccessKeyId=e850aff0dd5749a0a8df9f909014049c&amp;Signature=%2F6Vj1eGiIY5mmo2NmBOJXAoOVFQ%3D&amp;Expires=1717008592&#39;, &#39;uri&#39;: &#39;s3://MoBucket/7145cb80-1020-42d2-9321-23a75a0be9a9/T31UDP_20230907T104629_NDVI.tif&#39;}, {&#39;image&#39;: &#39;L2/tiles/31/U/DP/S2A_MSIL2A_20230614T105031_N0509_R051_T31UDP_20230614T163601.SAFE&#39;, &#39;processed&#39;: True, &#39;url&#39;: &#39;https://object-store.os-api.cci1.ecmwf.int/MoBucket/7145cb80-1020-42d2-9321-23a75a0be9a9/T31UDP_20230614T105031_NDVI.tif?AWSAccessKeyId=e850aff0dd5749a0a8df9f909014049c&amp;Signature=3IHJkiZHD%2B6aAgAvIPV%2By5TN3dE%3D&amp;Expires=1717008602&#39;, &#39;uri&#39;: &#39;s3://MoBucket/7145cb80-1020-42d2-9321-23a75a0be9a9/T31UDP_20230614T105031_NDVI.tif&#39;}, {&#39;image&#39;: &#39;L2/tiles/31/U/DP/S2A_MSIL2A_20230525T105031_N0509_R051_T31UDP_20230525T162958.SAFE&#39;, &#39;processed&#39;: True, &#39;url&#39;: &#39;https://object-store.os-api.cci1.ecmwf.int/MoBucket/7145cb80-1020-42d2-9321-23a75a0be9a9/T31UDP_20230525T105031_NDVI.tif?AWSAccessKeyId=e850aff0dd5749a0a8df9f909014049c&amp;Signature=SRUjCmmykUYkFT5Cwrno%2F8GSIJE%3D&amp;Expires=1717008610&#39;, &#39;uri&#39;: &#39;s3://MoBucket/7145cb80-1020-42d2-9321-23a75a0be9a9/T31UDP_20230525T105031_NDVI.tif&#39;}, {&#39;image&#39;: &#39;L2/tiles/31/U/DP/S2A_MSIL2A_20230214T105141_N0509_R051_T31UDP_20230214T171054.SAFE&#39;, &#39;processed&#39;: True, &#39;url&#39;: &#39;https://object-store.os-api.cci1.ecmwf.int/MoBucket/7145cb80-1020-42d2-9321-23a75a0be9a9/T31UDP_20230214T105141_NDVI.tif?AWSAccessKeyId=e850aff0dd5749a0a8df9f909014049c&amp;Signature=OsQuA%2FdQqg64GiinyB732oJmZL4%3D&amp;Expires=1717008622&#39;, &#39;uri&#39;: &#39;s3://MoBucket/7145cb80-1020-42d2-9321-23a75a0be9a9/T31UDP_20230214T105141_NDVI.tif&#39;}]&quot;}
+1
+{&quot;task_id&quot;:&quot;1dce9d65-2206-40de-9a29-93b98d7ba0c6&quot;,&quot;state&quot;:&quot;SUCCESS&quot;,&quot;result&quot;:&quot;[{&#39;image&#39;: &#39;L2/tiles/31/U/DP/S2B_MSIL2A_20231007T104829_N0509_R051_T31UDP_20231007T135731.SAFE&#39;, &#39;processed&#39;: True, &#39;url&#39;: &#39;https://object-store.os-api.cci1.ecmwf.int/MoBucket/1dce9d65-2206-40de-9a29-93b98d7ba0c6/T31UDP_20231007T104829_NDVI.tif?AWSAccessKeyId=e850aff0dd5749a0a8df9f909014049c&amp;Signature=GswHw9Okq7B8XKuzBWODY3oSojU%3D&amp;Expires=1717008571&#39;, &#39;uri&#39;: &#39;s3://MoBucket/1dce9d65-2206-40de-9a29-93b98d7ba0c6/T31UDP_20231007T104829_NDVI.tif&#39;}, {&#39;image&#39;: &#39;L2/tiles/31/U/DP/S2A_MSIL2A_20230604T104621_N0509_R051_T31UDP_20230604T165401.SAFE&#39;, &#39;processed&#39;: True, &#39;url&#39;: &#39;https://object-store.os-api.cci1.ecmwf.int/MoBucket/1dce9d65-2206-40de-9a29-93b98d7ba0c6/T31UDP_20230604T104621_NDVI.tif?AWSAccessKeyId=e850aff0dd5749a0a8df9f909014049c&amp;Signature=AbZiXP8sh9MgwmjBXSVL202qp60%3D&amp;Expires=1717008582&#39;, &#39;uri&#39;: &#39;s3://MoBucket/1dce9d65-2206-40de-9a29-93b98d7ba0c6/T31UDP_20230604T104621_NDVI.tif&#39;}, {&#39;image&#39;: &#39;L2/tiles/31/U/DP/S2B_MSIL2A_20230907T104629_N0509_R051_T31UDP_20230907T153138.SAFE&#39;, &#39;processed&#39;: True, &#39;url&#39;: &#39;https://object-store.os-api.cci1.ecmwf.int/MoBucket/1dce9d65-2206-40de-9a29-93b98d7ba0c6/T31UDP_20230907T104629_NDVI.tif?AWSAccessKeyId=e850aff0dd5749a0a8df9f909014049c&amp;Signature=kEJ0VRmZv8UAapFCJdY4Utpty90%3D&amp;Expires=1717008592&#39;, &#39;uri&#39;: &#39;s3://MoBucket/1dce9d65-2206-40de-9a29-93b98d7ba0c6/T31UDP_20230907T104629_NDVI.tif&#39;}, {&#39;image&#39;: &#39;L2/tiles/31/U/DP/S2A_MSIL2A_20230614T105031_N0509_R051_T31UDP_20230614T163601.SAFE&#39;, &#39;processed&#39;: True, &#39;url&#39;: &#39;https://object-store.os-api.cci1.ecmwf.int/MoBucket/1dce9d65-2206-40de-9a29-93b98d7ba0c6/T31UDP_20230614T105031_NDVI.tif?AWSAccessKeyId=e850aff0dd5749a0a8df9f909014049c&amp;Signature=31jScn8Ro7DyKpMKoiLvsCshgyI%3D&amp;Expires=1717008602&#39;, &#39;uri&#39;: &#39;s3://MoBucket/1dce9d65-2206-40de-9a29-93b98d7ba0c6/T31UDP_20230614T105031_NDVI.tif&#39;}, {&#39;image&#39;: &#39;L2/tiles/31/U/DP/S2A_MSIL2A_20230525T105031_N0509_R051_T31UDP_20230525T162958.SAFE&#39;, &#39;processed&#39;: True, &#39;url&#39;: &#39;https://object-store.os-api.cci1.ecmwf.int/MoBucket/1dce9d65-2206-40de-9a29-93b98d7ba0c6/T31UDP_20230525T105031_NDVI.tif?AWSAccessKeyId=e850aff0dd5749a0a8df9f909014049c&amp;Signature=DzGVbaS8u2SiW77RmocpsUTpdpY%3D&amp;Expires=1717008611&#39;, &#39;uri&#39;: &#39;s3://MoBucket/1dce9d65-2206-40de-9a29-93b98d7ba0c6/T31UDP_20230525T105031_NDVI.tif&#39;}, {&#39;image&#39;: &#39;L2/tiles/31/U/DP/S2A_MSIL2A_20230214T105141_N0509_R051_T31UDP_20230214T171054.SAFE&#39;, &#39;processed&#39;: True, &#39;url&#39;: &#39;https://object-store.os-api.cci1.ecmwf.int/MoBucket/1dce9d65-2206-40de-9a29-93b98d7ba0c6/T31UDP_20230214T105141_NDVI.tif?AWSAccessKeyId=e850aff0dd5749a0a8df9f909014049c&amp;Signature=7DajKGUyQYqnem373xxXhA3GaR8%3D&amp;Expires=1717008622&#39;, &#39;uri&#39;: &#39;s3://MoBucket/1dce9d65-2206-40de-9a29-93b98d7ba0c6/T31UDP_20230214T105141_NDVI.tif&#39;}]&quot;}
+2
+{&quot;task_id&quot;:&quot;df0c632e-2451-46f5-9a64-ffe29787529b&quot;,&quot;state&quot;:&quot;SUCCESS&quot;,&quot;result&quot;:&quot;[{&#39;image&#39;: &#39;L2/tiles/31/U/DP/S2B_MSIL2A_20231007T104829_N0509_R051_T31UDP_20231007T135731.SAFE&#39;, &#39;processed&#39;: True, &#39;url&#39;: &#39;https://object-store.os-api.cci1.ecmwf.int/MoBucket/df0c632e-2451-46f5-9a64-ffe29787529b/T31UDP_20231007T104829_NDVI.tif?AWSAccessKeyId=e850aff0dd5749a0a8df9f909014049c&amp;Signature=4ZE3i7JSfQpd7IjxdzPXLGHpyX8%3D&amp;Expires=1717008706&#39;, &#39;uri&#39;: &#39;s3://MoBucket/df0c632e-2451-46f5-9a64-ffe29787529b/T31UDP_20231007T104829_NDVI.tif&#39;}, {&#39;image&#39;: &#39;L2/tiles/31/U/DP/S2A_MSIL2A_20230604T104621_N0509_R051_T31UDP_20230604T165401.SAFE&#39;, &#39;processed&#39;: True, &#39;url&#39;: &#39;https://object-store.os-api.cci1.ecmwf.int/MoBucket/df0c632e-2451-46f5-9a64-ffe29787529b/T31UDP_20230604T104621_NDVI.tif?AWSAccessKeyId=e850aff0dd5749a0a8df9f909014049c&amp;Signature=COZpIi9viwb892cZxBAfNdaOW8E%3D&amp;Expires=1717008710&#39;, &#39;uri&#39;: &#39;s3://MoBucket/df0c632e-2451-46f5-9a64-ffe29787529b/T31UDP_20230604T104621_NDVI.tif&#39;}, {&#39;image&#39;: &#39;L2/tiles/31/U/DP/S2B_MSIL2A_20230907T104629_N0509_R051_T31UDP_20230907T153138.SAFE&#39;, &#39;processed&#39;: True, &#39;url&#39;: &#39;https://object-store.os-api.cci1.ecmwf.int/MoBucket/df0c632e-2451-46f5-9a64-ffe29787529b/T31UDP_20230907T104629_NDVI.tif?AWSAccessKeyId=e850aff0dd5749a0a8df9f909014049c&amp;Signature=yEZ%2FRbz3OPo2tK0GyHjxlcvx9sI%3D&amp;Expires=1717008720&#39;, &#39;uri&#39;: &#39;s3://MoBucket/df0c632e-2451-46f5-9a64-ffe29787529b/T31UDP_20230907T104629_NDVI.tif&#39;}, {&#39;image&#39;: &#39;L2/tiles/31/U/DP/S2A_MSIL2A_20230614T105031_N0509_R051_T31UDP_20230614T163601.SAFE&#39;, &#39;processed&#39;: True, &#39;url&#39;: &#39;https://object-store.os-api.cci1.ecmwf.int/MoBucket/df0c632e-2451-46f5-9a64-ffe29787529b/T31UDP_20230614T105031_NDVI.tif?AWSAccessKeyId=e850aff0dd5749a0a8df9f909014049c&amp;Signature=TlXDe80uky5mXZDc01UYmM6t41w%3D&amp;Expires=1717008723&#39;, &#39;uri&#39;: &#39;s3://MoBucket/df0c632e-2451-46f5-9a64-ffe29787529b/T31UDP_20230614T105031_NDVI.tif&#39;}, {&#39;image&#39;: &#39;L2/tiles/31/U/DP/S2A_MSIL2A_20230525T105031_N0509_R051_T31UDP_20230525T162958.SAFE&#39;, &#39;processed&#39;: True, &#39;url&#39;: &#39;https://object-store.os-api.cci1.ecmwf.int/MoBucket/df0c632e-2451-46f5-9a64-ffe29787529b/T31UDP_20230525T105031_NDVI.tif?AWSAccessKeyId=e850aff0dd5749a0a8df9f909014049c&amp;Signature=AqF81HVHJ6uD%2BSbM5J9nvjIyzPQ%3D&amp;Expires=1717008727&#39;, &#39;uri&#39;: &#39;s3://MoBucket/df0c632e-2451-46f5-9a64-ffe29787529b/T31UDP_20230525T105031_NDVI.tif&#39;}, {&#39;image&#39;: &#39;L2/tiles/31/U/DP/S2A_MSIL2A_20230214T105141_N0509_R051_T31UDP_20230214T171054.SAFE&#39;, &#39;processed&#39;: True, &#39;url&#39;: &#39;https://object-store.os-api.cci1.ecmwf.int/MoBucket/df0c632e-2451-46f5-9a64-ffe29787529b/T31UDP_20230214T105141_NDVI.tif?AWSAccessKeyId=e850aff0dd5749a0a8df9f909014049c&amp;Signature=k1P6JGFKmeLWs1oz0dMARSy81I8%3D&amp;Expires=1717008731&#39;, &#39;uri&#39;: &#39;s3://MoBucket/df0c632e-2451-46f5-9a64-ffe29787529b/T31UDP_20230214T105141_NDVI.tif&#39;}]&quot;}
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="save-results-to-local-files">
+<h4>Save results to local files<a class="headerlink" href="#save-results-to-local-files" title="Link to this heading">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>for task_id in list_tasks:
+    params = {&#39;task_id&#39;: task_id}
+    response = requests.get(os.path.join(sentinel_api,&quot;api/v1/s2l2a/roi/process&quot;), headers=headers, params=params)
+    results = response.json()
+    task_output_path = os.path.join(data_path,&quot;NDVI&quot;,task_id)
+    os.makedirs(task_output_path,exist_ok=True)
+    for res in results[&quot;results&quot;]:
+        file_name = get_filename_from_url(res[&quot;url&quot;])
+        res_output_path = os.path.join(task_output_path,file_name)
+        save_image_from_url(res[&quot;url&quot;],res_output_path)
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Image successfully saved to data/crop_monitoring/NDVI/7145cb80-1020-42d2-9321-23a75a0be9a9/T31UDP_20231007T104829_NDVI.tif
+Image successfully saved to data/crop_monitoring/NDVI/7145cb80-1020-42d2-9321-23a75a0be9a9/T31UDP_20230604T104621_NDVI.tif
+Image successfully saved to data/crop_monitoring/NDVI/7145cb80-1020-42d2-9321-23a75a0be9a9/T31UDP_20230907T104629_NDVI.tif
+Image successfully saved to data/crop_monitoring/NDVI/7145cb80-1020-42d2-9321-23a75a0be9a9/T31UDP_20230614T105031_NDVI.tif
+Image successfully saved to data/crop_monitoring/NDVI/7145cb80-1020-42d2-9321-23a75a0be9a9/T31UDP_20230525T105031_NDVI.tif
+Image successfully saved to data/crop_monitoring/NDVI/7145cb80-1020-42d2-9321-23a75a0be9a9/T31UDP_20230214T105141_NDVI.tif
+Image successfully saved to data/crop_monitoring/NDVI/1dce9d65-2206-40de-9a29-93b98d7ba0c6/T31UDP_20231007T104829_NDVI.tif
+Image successfully saved to data/crop_monitoring/NDVI/1dce9d65-2206-40de-9a29-93b98d7ba0c6/T31UDP_20230604T104621_NDVI.tif
+Image successfully saved to data/crop_monitoring/NDVI/1dce9d65-2206-40de-9a29-93b98d7ba0c6/T31UDP_20230907T104629_NDVI.tif
+Image successfully saved to data/crop_monitoring/NDVI/1dce9d65-2206-40de-9a29-93b98d7ba0c6/T31UDP_20230614T105031_NDVI.tif
+Image successfully saved to data/crop_monitoring/NDVI/1dce9d65-2206-40de-9a29-93b98d7ba0c6/T31UDP_20230525T105031_NDVI.tif
+Image successfully saved to data/crop_monitoring/NDVI/1dce9d65-2206-40de-9a29-93b98d7ba0c6/T31UDP_20230214T105141_NDVI.tif
+Image successfully saved to data/crop_monitoring/NDVI/df0c632e-2451-46f5-9a64-ffe29787529b/T31UDP_20231007T104829_NDVI.tif
+Image successfully saved to data/crop_monitoring/NDVI/df0c632e-2451-46f5-9a64-ffe29787529b/T31UDP_20230604T104621_NDVI.tif
+Image successfully saved to data/crop_monitoring/NDVI/df0c632e-2451-46f5-9a64-ffe29787529b/T31UDP_20230907T104629_NDVI.tif
+Image successfully saved to data/crop_monitoring/NDVI/df0c632e-2451-46f5-9a64-ffe29787529b/T31UDP_20230614T105031_NDVI.tif
+Image successfully saved to data/crop_monitoring/NDVI/df0c632e-2451-46f5-9a64-ffe29787529b/T31UDP_20230525T105031_NDVI.tif
+Image successfully saved to data/crop_monitoring/NDVI/df0c632e-2451-46f5-9a64-ffe29787529b/T31UDP_20230214T105141_NDVI.tif
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="visualize-ndvi-maps-to-monitor-crops">
+<h4>Visualize NDVI Maps to monitor crops<a class="headerlink" href="#visualize-ndvi-maps-to-monitor-crops" title="Link to this heading">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>ndvi_path = os.path.join(data_path,&quot;NDVI&quot;)
+for task_example in list_tasks:
+    list_downloaded_imgs = [os.path.join(ndvi_path,task_example,name) for name in os.listdir(os.path.join(ndvi_path,task_example))\
+                            if os.path.isfile(os.path.join(ndvi_path,task_example,name))\
+                                and name.split(&quot;.&quot;)[1]==&quot;tif&quot; and len(name.split(&quot;.&quot;))==2]
+    list_downloaded_imgs = sorted(list_downloaded_imgs,\
+                                key=lambda x: int(os.path.basename(x).split(&quot;_&quot;)[1][0:8]))
+    num_images = len(list_downloaded_imgs)
+    cols = 3  
+    rows = (num_images // cols) + (num_images % cols &gt; 0) 
+    plt.figure(figsize=(15, 5 * rows)) 
+    for i, image_path in enumerate(list_downloaded_imgs):
+        if not os.path.exists(image_path):
+            print(f&quot;Image not found: {image_path}&quot;)
+            continue
+        img = tiff.imread(image_path)
+        img[img==-1000] = np.nan
+        plt.subplot(rows, cols, i + 1)
+        cmap = plt.get_cmap(&#39;RdYlGn&#39;)
+        norm = mcolors.TwoSlopeNorm(vmin=-1, vcenter=0.4, vmax=1)
+        plt.imshow(img, cmap=cmap, norm=norm)
+        #plt.imshow(img)
+        plt.axis(&#39;off&#39;) 
+        plt.title(os.path.basename(image_path))
+    plt.tight_layout()
+    plt.show()
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/50b18f58cf0c8d3c80c6b050ccaa88c6f67515dfd935e6cab86f745996cbee50.png" src="_images/50b18f58cf0c8d3c80c6b050ccaa88c6f67515dfd935e6cab86f745996cbee50.png" />
+<img alt="_images/83fc152d62c16312cae0051393aea3ab1dc686f7ccc9d7c47c60041b8c11ccef.png" src="_images/83fc152d62c16312cae0051393aea3ab1dc686f7ccc9d7c47c60041b8c11ccef.png" />
+<img alt="_images/1418fb3c17660baedaf8004016ff30d2bb4f60a7e045b5e1f30b0dced28444f1.png" src="_images/1418fb3c17660baedaf8004016ff30d2bb4f60a7e045b5e1f30b0dced28444f1.png" />
+</div>
+</div>
+</section>
+</section>
+<section id="workflow-2-leaf-area-index-estimation">
+<h3>WORKFLOW 2 Leaf Area Index Estimation<a class="headerlink" href="#workflow-2-leaf-area-index-estimation" title="Link to this heading">#</a></h3>
+<section id="send-a-request-to-the-sentinel-api-to-prepare-a-tile-with-stack-of-bands">
+<h4>Send a request to the Sentinel API to prepare a tile with stack of bands<a class="headerlink" href="#send-a-request-to-the-sentinel-api-to-prepare-a-tile-with-stack-of-bands" title="Link to this heading">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>data = {
+    &quot;tile&quot;:&quot;31UDP&quot;,
+    &quot;start_date&quot;:&quot;2023-06-01&quot;,
+    &quot;end_date&quot;:&quot;2023-09-01&quot;,
+    &quot;cloud_cover&quot;:&quot;10&quot;,
+    &quot;index&quot;:&quot;[&#39;B02&#39;,&#39;B03&#39;,&#39;B04&#39;,&#39;B05&#39;,&#39;B06&#39;,&#39;B07&#39;,&#39;B08&#39;,&#39;B8A&#39;,&#39;B11&#39;,&#39;B12&#39;]&quot;  
+}
+response = requests.post(os.path.join(sentinel_api,&quot;api/v1/s2l2a/tile/process&quot;), headers=headers, json=data)
+print(response.text)
+task_id = json.loads(response.content.decode())
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&quot;task_id&quot;:&quot;ca1f2fed-9e11-4b48-9af0-2c834f3b08f8&quot;}
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id4">
+<h4>Monitor task status<a class="headerlink" href="#id4" title="Link to this heading">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>params = {&#39;task_id&#39;: task_id[&quot;task_id&quot;]}
+response = requests.get(os.path.join(sentinel_api,&quot;api/v1/task/status&quot;), headers=headers, params=params)
+print(response.text)
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&quot;task_id&quot;:&quot;ca1f2fed-9e11-4b48-9af0-2c834f3b08f8&quot;,&quot;state&quot;:&quot;SUCCESS&quot;,&quot;result&quot;:&quot;[{&#39;image&#39;: &#39;L2/tiles/31/U/DP/S2B_MSIL2A_20230821T105629_N0509_R094_T31UDP_20230821T140250.SAFE&#39;, &#39;processed&#39;: True, &#39;url&#39;: &#39;https://object-store.os-api.cci1.ecmwf.int/MoBucket/ca1f2fed-9e11-4b48-9af0-2c834f3b08f8/T31UDP_20230821T105629_stack.tif?AWSAccessKeyId=e850aff0dd5749a0a8df9f909014049c&amp;Signature=RxHqI%2Bc6i9P0BsJ3mEl3ETvTwAw%3D&amp;Expires=1717009056&#39;, &#39;uri&#39;: &#39;s3://MoBucket/ca1f2fed-9e11-4b48-9af0-2c834f3b08f8/T31UDP_20230821T105629_stack.tif&#39;}, {&#39;image&#39;: &#39;L2/tiles/31/U/DP/S2A_MSIL2A_20230607T105621_N0509_R094_T31UDP_20230607T171312.SAFE&#39;, &#39;processed&#39;: True, &#39;url&#39;: &#39;https://object-store.os-api.cci1.ecmwf.int/MoBucket/ca1f2fed-9e11-4b48-9af0-2c834f3b08f8/T31UDP_20230607T105621_stack.tif?AWSAccessKeyId=e850aff0dd5749a0a8df9f909014049c&amp;Signature=gK1bVfoosZUdUli%2FNvg5smqWPY8%3D&amp;Expires=1717009207&#39;, &#39;uri&#39;: &#39;s3://MoBucket/ca1f2fed-9e11-4b48-9af0-2c834f3b08f8/T31UDP_20230607T105621_stack.tif&#39;}, {&#39;image&#39;: &#39;L2/tiles/31/U/DP/S2A_MSIL2A_20230614T105031_N0509_R051_T31UDP_20230614T163601.SAFE&#39;, &#39;processed&#39;: True, &#39;url&#39;: &#39;https://object-store.os-api.cci1.ecmwf.int/MoBucket/ca1f2fed-9e11-4b48-9af0-2c834f3b08f8/T31UDP_20230614T105031_stack.tif?AWSAccessKeyId=e850aff0dd5749a0a8df9f909014049c&amp;Signature=i5tGe3PS7uEICa9iSEw752WsI9M%3D&amp;Expires=1717009411&#39;, &#39;uri&#39;: &#39;s3://MoBucket/ca1f2fed-9e11-4b48-9af0-2c834f3b08f8/T31UDP_20230614T105031_stack.tif&#39;}]&quot;}
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="get-results">
+<h4>Get results<a class="headerlink" href="#get-results" title="Link to this heading">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>params = {&#39;task_id&#39;: task_id[&quot;task_id&quot;]}
+response = requests.get(os.path.join(sentinel_api,&quot;api/v1/s2l2a/tile/process&quot;), headers=headers, params=params)
+results = response.json()
+print (results)
+print (len(results[&#39;results&#39;]))
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;results&#39;: [{&#39;image&#39;: &#39;L2/tiles/31/U/DP/S2B_MSIL2A_20230821T105629_N0509_R094_T31UDP_20230821T140250.SAFE&#39;, &#39;processed&#39;: True, &#39;url&#39;: &#39;https://object-store.os-api.cci1.ecmwf.int/MoBucket/ca1f2fed-9e11-4b48-9af0-2c834f3b08f8/T31UDP_20230821T105629_stack.tif?AWSAccessKeyId=e850aff0dd5749a0a8df9f909014049c&amp;Signature=RxHqI%2Bc6i9P0BsJ3mEl3ETvTwAw%3D&amp;Expires=1717009056&#39;, &#39;uri&#39;: &#39;s3://MoBucket/ca1f2fed-9e11-4b48-9af0-2c834f3b08f8/T31UDP_20230821T105629_stack.tif&#39;}, {&#39;image&#39;: &#39;L2/tiles/31/U/DP/S2A_MSIL2A_20230607T105621_N0509_R094_T31UDP_20230607T171312.SAFE&#39;, &#39;processed&#39;: True, &#39;url&#39;: &#39;https://object-store.os-api.cci1.ecmwf.int/MoBucket/ca1f2fed-9e11-4b48-9af0-2c834f3b08f8/T31UDP_20230607T105621_stack.tif?AWSAccessKeyId=e850aff0dd5749a0a8df9f909014049c&amp;Signature=gK1bVfoosZUdUli%2FNvg5smqWPY8%3D&amp;Expires=1717009207&#39;, &#39;uri&#39;: &#39;s3://MoBucket/ca1f2fed-9e11-4b48-9af0-2c834f3b08f8/T31UDP_20230607T105621_stack.tif&#39;}, {&#39;image&#39;: &#39;L2/tiles/31/U/DP/S2A_MSIL2A_20230614T105031_N0509_R051_T31UDP_20230614T163601.SAFE&#39;, &#39;processed&#39;: True, &#39;url&#39;: &#39;https://object-store.os-api.cci1.ecmwf.int/MoBucket/ca1f2fed-9e11-4b48-9af0-2c834f3b08f8/T31UDP_20230614T105031_stack.tif?AWSAccessKeyId=e850aff0dd5749a0a8df9f909014049c&amp;Signature=i5tGe3PS7uEICa9iSEw752WsI9M%3D&amp;Expires=1717009411&#39;, &#39;uri&#39;: &#39;s3://MoBucket/ca1f2fed-9e11-4b48-9af0-2c834f3b08f8/T31UDP_20230614T105031_stack.tif&#39;}]}
+3
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>lai_output_path = os.path.join(data_path,&quot;lai&quot;)
+os.makedirs(lai_output_path,exist_ok=True)
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="send-a-post-request-to-the-lai-api">
+<h4>Send a POST request to the LAI API<a class="headerlink" href="#send-a-post-request-to-the-lai-api" title="Link to this heading">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>data = {&quot;list_image_uri&quot;:[results[&quot;results&quot;][1][&quot;uri&quot;]]}
+response = requests.post(os.path.join(lai_api,&quot;api/v1/lai/process&quot;),headers=headers,json=data)
+print (response.text)
+task_id = json.loads(response.content.decode())
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&quot;task_id&quot;:&quot;98853328-8b81-4d31-8f21-f5fad5d9ad76&quot;}
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="check-status-of-the-submitted-task">
+<h4>Check status of the submitted task<a class="headerlink" href="#check-status-of-the-submitted-task" title="Link to this heading">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>params = {&#39;task_id&#39;: task_id[&quot;task_id&quot;]}
+response = requests.get(os.path.join(lai_api,&quot;api/v1/task/status&quot;), headers=headers, params=params)
+print(response.text)
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&quot;task_id&quot;:&quot;98853328-8b81-4d31-8f21-f5fad5d9ad76&quot;,&quot;state&quot;:&quot;SUCCESS&quot;,&quot;result&quot;:&quot;[{&#39;image_uri&#39;: &#39;s3://MoBucket/ca1f2fed-9e11-4b48-9af0-2c834f3b08f8/T31UDP_20230607T105621_stack.tif&#39;, &#39;processed&#39;: True, &#39;result_url&#39;: &#39;https://object-store.os-api.cci1.ecmwf.int/MoBucket/98853328-8b81-4d31-8f21-f5fad5d9ad76/T31UDP_20230607T105621_stack_LAI.tif?AWSAccessKeyId=e850aff0dd5749a0a8df9f909014049c&amp;Signature=fiNgOQ1fYgG0keEwNMo3jZxwMDw%3D&amp;Expires=1717011834&#39;, &#39;result_uri&#39;: &#39;s3://MoBucket/98853328-8b81-4d31-8f21-f5fad5d9ad76/T31UDP_20230607T105621_stack_LAI.tif&#39;}]&quot;}
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="get-processing-results">
+<h4>Get processing results<a class="headerlink" href="#get-processing-results" title="Link to this heading">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>params = {&#39;task_id&#39;: task_id[&quot;task_id&quot;]}
+response = requests.get(os.path.join(lai_api,&quot;api/v1/lai/process&quot;), headers=headers, params=params)
+results = response.json()
+print (results)
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;results&#39;: [{&#39;image_uri&#39;: &#39;s3://MoBucket/ca1f2fed-9e11-4b48-9af0-2c834f3b08f8/T31UDP_20230607T105621_stack.tif&#39;, &#39;processed&#39;: True, &#39;result_url&#39;: &#39;https://object-store.os-api.cci1.ecmwf.int/MoBucket/98853328-8b81-4d31-8f21-f5fad5d9ad76/T31UDP_20230607T105621_stack_LAI.tif?AWSAccessKeyId=e850aff0dd5749a0a8df9f909014049c&amp;Signature=fiNgOQ1fYgG0keEwNMo3jZxwMDw%3D&amp;Expires=1717011834&#39;, &#39;result_uri&#39;: &#39;s3://MoBucket/98853328-8b81-4d31-8f21-f5fad5d9ad76/T31UDP_20230607T105621_stack_LAI.tif&#39;}]}
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="save-results-to-local-file">
+<h4>Save results to local file<a class="headerlink" href="#save-results-to-local-file" title="Link to this heading">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>file_name = get_filename_from_url(results[&quot;results&quot;][0][&quot;result_url&quot;])
+lai_output_tif_path = os.path.join(lai_output_path,file_name)
+save_image_from_url(results[&quot;results&quot;][0][&quot;result_url&quot;],lai_output_tif_path)
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Image successfully saved to data/crop_monitoring/lai/T31UDP_20230607T105621_stack_LAI.tif
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="visualize-lai-results">
+<h4>Visualize LAI results<a class="headerlink" href="#visualize-lai-results" title="Link to this heading">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>lai_arr = tiff.imread(lai_output_tif_path)
+cmap = plt.get_cmap(&#39;RdYlGn&#39;)
+norm = mcolors.TwoSlopeNorm(vmin=0, vcenter=2.0, vmax=5)
+plt.imshow(lai_arr, cmap=cmap, norm=norm)
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x16851ded0&gt;
+</pre></div>
+</div>
+<img alt="_images/298107e34564c0a95ec5fd1a9afc0d2b7225b6659f9fa9e5e0cb864f238b083a.png" src="_images/298107e34564c0a95ec5fd1a9afc0d2b7225b6659f9fa9e5e0cb864f238b083a.png" />
+</div>
+</div>
+</section>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="processing_apis.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Examples of Processing APIs in EO4EU</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="object_detection.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Object Segmentation and Detection</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#field-ndvi-maps">Field NDVI Maps</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#leaf-area-index-for-a-whole-sentinel-2-tile">Leaf Area Index for a Whole Sentinel-2 Tile</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#required-imports">Required imports</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#urls-of-the-apis-to-be-used">URLs of the APIs to be used</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#headers-for-the-api-requests">Headers for the API requests</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-directory">Data directory</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#workflow1-field-ndvi-maps">WORKFLOW1 Field NDVI Maps</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-shapefile-on-qgis-to-define-the-roi-in-epsg-4326-then-read-this-file-and-convert-the-geomerty-to-xy-coordinates-to-prepare-for-the-api-call">Create a shapefile on QGIS to define the ROI in EPSG 4326. Then read this file and convert the geomerty to xy coordinates to prepare for the API call</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#call-the-sentinel-api-to-get-rgb-images-of-the-roi-the-required-parameters-are">Call the Sentinel API to get RGB images of the ROI. The required parameters are:</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#monitor-task-status">Monitor task status</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#get-results-using-task-id">Get results using task ID</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#save-results-from-signed-url-to-local-files">Save results from signed URL to local files</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#visualize-results">Visualize results</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#segment-the-obtained-image-using-automatic-sam-segmentation-mode-the-required-parameters-are">Segment the obtained image using automatic SAM segmentation mode. The required parameters are</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Monitor task status</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Get results using task ID</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#download-results-from-signed-url-to-local-files">Download results from signed URL to local files</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Visualize results</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#polygonize-segmentation-mask">Polygonize segmentation mask</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#filter-polygons-with-surface-less-that-100000">Filter polygons with surface less that 100000</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#select-randomly-two-fields-from-the-filtered-geodataframe">Select randomly two fields from the filtered GeoDataFrame</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#for-each-polygon-field-send-a-post-request-to-sentinel-api-to-get-ndvi-in-2023-with-10-cloud-cover">For each polygon (field), send a POST request to Sentinel API to get NDVI in 2023 with 10% cloud cover</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#monitor-tasks-status">Monitor tasks status</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#save-results-to-local-files">Save results to local files</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#visualize-ndvi-maps-to-monitor-crops">Visualize NDVI Maps to monitor crops</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#workflow-2-leaf-area-index-estimation">WORKFLOW 2 Leaf Area Index Estimation</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#send-a-request-to-the-sentinel-api-to-prepare-a-tile-with-stack-of-bands">Send a request to the Sentinel API to prepare a tile with stack of bands</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Monitor task status</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#get-results">Get results</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#send-a-post-request-to-the-lai-api">Send a POST request to the LAI API</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#check-status-of-the-submitted-task">Check status of the submitted task</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#get-processing-results">Get processing results</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#save-results-to-local-file">Save results to local file</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#visualize-lai-results">Visualize LAI results</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By EO4EU
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

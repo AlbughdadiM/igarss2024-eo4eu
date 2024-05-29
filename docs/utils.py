@@ -163,7 +163,9 @@ def read_annotation_file(annotation_path):
     for line in lines:
         values = line.strip().split()
         category = values[0]
-        x1, y1, x2, y2, x3, y3, x4, y4 = map(lambda val: float(val) * 1024, values[1:])
+        x1, y1, x2, y2, x3, y3, x4, y4 = map(
+            lambda val: float(val) * 1025, values[1:-1]
+        )
         annotations.append(
             {"class_id": int(category), "coordinates": [x1, y1, x2, y2, x3, y3, x4, y4]}
         )

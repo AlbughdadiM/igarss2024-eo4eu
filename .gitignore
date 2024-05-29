@@ -1,5 +1,8 @@
 other_data
 lai
+data/
+!ROI/
+!sentinel_roi/
 T31TCJ_20220905T105619_stack.*
 *.tif
 patch*.txt
@@ -28,3 +31,4 @@ venv/
 ENV/
 env/
 .venv/
+myvenv/
