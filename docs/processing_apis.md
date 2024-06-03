@@ -103,7 +103,7 @@ Object detection in remote sensing involves identifying and locating specific ob
 
 The object detection API is available on [Object detection API](http://od-api-test.dev.apps.eo4eu.eu)
 
-### Endpoints
+### Object Detection API Endpoints
 
 `POST api/v1/yolov8/obb/detect`
 
