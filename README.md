@@ -1,6 +1,12 @@
 # EO4EU IGARSS 2024 TUTORIAL
 
 This repository contains two notebooks showing how to use the APIs available in EO4EU to create workflow to process remote sensing data.
+> [!IMPORTANT]  
+> Before getting started with the practical examples, the user has two options to run them
+>
+> 1. Locally on their own machines. In this case they proceed with the instructions below to create the virtual environment and install the requirements.
+> 2. Getting access to Pangeo-eosc services and hence an access to JupyterHub with Pangeo Notebook environment:
+<https://pangeo-data.github.io/pangeo-openeo-BiDS-2023/before/EOSC.html>.
 
 To get started follow the instructions below:
 
