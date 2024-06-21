@@ -32,9 +32,9 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=384b581d" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=87e54e7c" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
@@ -52,7 +52,7 @@
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="_static/design-tabs.js?v=36754332"></script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
@@ -60,7 +60,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'eo4eu_intro';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Examples of Processing APIs in EO4EU" href="processing_apis.html" />
+    <link rel="next" title="How To Setup A Working Environment" href="instructions.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -178,6 +178,7 @@
             </li>
         </ul>
         <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="instructions.html">How To Setup A Working Environment</a></li>
 <li class="toctree-l1"><a class="reference internal" href="processing_apis.html">Examples of Processing APIs in EO4EU</a></li>
 <li class="toctree-l1"><a class="reference internal" href="crop_monitoring.html">Crop Monitoring</a></li>
 <li class="toctree-l1"><a class="reference internal" href="object_detection.html">Object Segmentation and Detection</a></li>
@@ -376,6 +377,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites">Prerequisites</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#eo4eu-objectives">EO4EU Objectives</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#eo4eu-architecture">EO4EU Architecture</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#eo4eu-infrastructure">EO4EU Infrastructure</a></li>
@@ -393,6 +395,20 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="eo4eu-tutorial-igarss-2024">
 <h1>EO4EU Tutorial IGARSS 2024<a class="headerlink" href="#eo4eu-tutorial-igarss-2024" title="Link to this heading">#</a></h1>
+<section id="prerequisites">
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Link to this heading">#</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Before starting this tutorial, participants should have:</p>
+<ul class="simple">
+<li><p>Basic knowledge of Python.</p></li>
+<li><p>Basic knowledge of geospatial data formats (raster and vector files).</p></li>
+<li><p>Basic knowledge of Earth Observation concepts like Copernicus offer and Very High Resolution images.</p></li>
+<li><p>Prior exposure to AI concepts and tools is recommended.</p></li>
+<li><p>Participants in this tutorial should have their laptops with Python3 installed/access to Pangeo-eosc JupyterHub and internet connection.</p></li>
+</ul>
+</div>
+</section>
 <section id="eo4eu-objectives">
 <h2>EO4EU Objectives<a class="headerlink" href="#eo4eu-objectives" title="Link to this heading">#</a></h2>
 <p>AI-augmented ecosystem for Earth Observation data accessibility with Extended reality User Interfaces for Service and data exploitation, or EO4EU, is a European Commission funded innovation project which aims at creating an advanced platform for searching, discovering, processing and analyzing EO data.​
@@ -431,6 +447,7 @@ The platform leverages machine learning to support handling of the characteristi
 </div></blockquote>
 <div class="toctree-wrapper compound">
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="instructions.html">How To Setup A Working Environment</a></li>
 <li class="toctree-l1"><a class="reference internal" href="processing_apis.html">Examples of Processing APIs in EO4EU</a></li>
 <li class="toctree-l1"><a class="reference internal" href="crop_monitoring.html">Crop Monitoring</a></li>
 <li class="toctree-l1"><a class="reference internal" href="object_detection.html">Object Segmentation and Detection</a></li>
@@ -470,11 +487,11 @@ The platform leverages machine learning to support handling of the characteristi
                   
 <div class="prev-next-area">
     <a class="right-next"
-       href="processing_apis.html"
+       href="instructions.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Examples of Processing APIs in EO4EU</p>
+        <p class="prev-next-title">How To Setup A Working Environment</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -494,6 +511,7 @@ The platform leverages machine learning to support handling of the characteristi
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites">Prerequisites</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#eo4eu-objectives">EO4EU Objectives</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#eo4eu-architecture">EO4EU Architecture</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#eo4eu-infrastructure">EO4EU Infrastructure</a></li>

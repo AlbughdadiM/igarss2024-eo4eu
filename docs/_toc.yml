@@ -4,6 +4,7 @@
 format: jb-book
 root: eo4eu_intro
 chapters:
+  - file: instructions
   - file: processing_apis
   - file: crop_monitoring
   - file: object_detection

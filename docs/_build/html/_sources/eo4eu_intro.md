@@ -1,5 +1,17 @@
 # EO4EU Tutorial IGARSS 2024
 
+## Prerequisites
+
+```{Note}
+Before starting this tutorial, participants should have:
+
+- Basic knowledge of Python.
+- Basic knowledge of geospatial data formats (raster and vector files).
+- Basic knowledge of Earth Observation concepts like Copernicus offer and Very High Resolution images.
+- Prior exposure to AI concepts and tools is recommended.
+- Participants in this tutorial should have their laptops with Python3 installed/access to Pangeo-eosc JupyterHub and internet connection.
+```
+
 ## EO4EU Objectives
 
 AI-augmented ecosystem for Earth Observation data accessibility with Extended reality User Interfaces for Service and data exploitation, or EO4EU, is a European Commission funded innovation project which aims at creating an advanced platform for searching, discovering, processing and analyzing EO data.​

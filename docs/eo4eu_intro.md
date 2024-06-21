@@ -2,13 +2,15 @@
 
 ## Prerequisites
 
-Before starting this tutorial, learners should have:
+```{Note}
+Before starting this tutorial, participants should have:
 
 - Basic knowledge of Python.
 - Basic knowledge of geospatial data formats (raster and vector files).
 - Basic knowledge of Earth Observation concepts like Copernicus offer and Very High Resolution images.
 - Prior exposure to AI concepts and tools is recommended.
-- Participants in this tutorial should have their laptops with Python3 installed internet connection to access the APIs.
+- Participants in this tutorial should have their laptops with Python3 installed/access to Pangeo-eosc JupyterHub and internet connection.
+```
 
 ## EO4EU Objectives
 
