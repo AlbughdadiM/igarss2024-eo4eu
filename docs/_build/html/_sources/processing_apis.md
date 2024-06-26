@@ -20,7 +20,7 @@ Wide Swath Width: Each satellite has a swath width of 290 kilometers, allowing f
 
 This API allows processing and downloading Sentinel-2 data for an ROI or a full Sentinel-2 tile.
 
-The API is available on [Sentinel-2 API](http://sentinel-api-test.dev.apps.eo4eu.eu/)
+The documentation of this API is available on [Sentinel-2 API](http://sentinel-api-test.dev.apps.eo4eu.eu/docs)
 
 ### Sentinel-2 API Endpoints
 
@@ -50,7 +50,7 @@ The Leaf Area Index (LAI) Model is a dimensionless biophysical parameter represe
 
 This API estimates leaf area index for a whole Sentinel-2 scene using a deep neural network.
 
-The API is available on [LAI API](http://lai-api-test.dev.apps.eo4eu.eu/)
+The documentation of this API is available on [LAI API](http://lai-api-test.dev.apps.eo4eu.eu/docs)
 
 ### LAI API Endpoints
 
@@ -75,7 +75,7 @@ The Segment Anything Model (SAM) is a cutting-edge deep learning model developed
 - Foundation for Further Research: SAM can serve as a robust baseline for researchers developing new segmentation models or applications, fostering innovation and advancement in the field of computer vision.
 - Enhanced Performance: SAM's large-scale training and ability to generalize across diverse datasets contribute to its high performance, making it a reliable tool for complex segmentation tasks.
 
-The API of SAM is available on [SAM API](http://sam-api-test.dev.apps.eo4eu.eu)
+The documentation of SAM API is available on [SAM API](http://sam-api-test.dev.apps.eo4eu.eu/docs)
 
 ### SAM API Endpoints
 
@@ -101,7 +101,7 @@ Object detection in remote sensing involves identifying and locating specific ob
 - Urban Green Spaces: Detects recreational facilities such as baseball diamonds, tennis courts, basketball courts, ground-track fields, soccer fields, and swimming pools to monitor urban green spaces.
 - Economic Activities: Identifies container cranes at ports to monitor economic activities.
 
-The object detection API is available on [Object detection API](http://od-api-test.dev.apps.eo4eu.eu)
+The documentation of object detection API is available on [Object detection API](http://od-api-test.dev.apps.eo4eu.eu/docs)
 
 ### Object Detection API Endpoints
 

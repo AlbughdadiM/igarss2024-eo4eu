@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=384b581d" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=87e54e7c" />
   
@@ -176,9 +176,13 @@
                 </a>
             </li>
         </ul>
-        <ul class="current nav bd-sidenav">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="instructions.html">How To Setup A Working Environment</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Examples of Processing APIs in EO4EU</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Practical Use Cases</span></p>
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="crop_monitoring.html">Crop Monitoring</a></li>
 <li class="toctree-l1"><a class="reference internal" href="object_detection.html">Object Segmentation and Detection</a></li>
 </ul>
@@ -423,7 +427,7 @@ Wide Swath Width: Each satellite has a swath width of 290 kilometers, allowing f
 <li><p>Water Quality Monitoring: The multispectral capabilities allow for the assessment of water bodies, detecting changes in water quality and aiding in the management of water resources.</p></li>
 </ul>
 <p>This API allows processing and downloading Sentinel-2 data for an ROI or a full Sentinel-2 tile.</p>
-<p>The API is available on <a class="reference external" href="http://sentinel-api-test.dev.apps.eo4eu.eu/">Sentinel-2 API</a></p>
+<p>The documentation of this API is available on <a class="reference external" href="http://sentinel-api-test.dev.apps.eo4eu.eu/docs">Sentinel-2 API</a></p>
 <section id="sentinel-2-api-endpoints">
 <h3>Sentinel-2 API Endpoints<a class="headerlink" href="#sentinel-2-api-endpoints" title="Link to this heading">#</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">POST</span> <span class="pre">api/v1/s2l2a/roi/process</span></code></p>
@@ -446,7 +450,7 @@ Wide Swath Width: Each satellite has a swath width of 290 kilometers, allowing f
 <li><p>Large-Scale Monitoring: High-resolution optical satellite images, such as Sentinel-2 and LANDSAT, can estimate LAI, allowing for large-scale monitoring of vegetation across different landscapes and time periods.</p></li>
 </ul>
 <p>This API estimates leaf area index for a whole Sentinel-2 scene using a deep neural network.</p>
-<p>The API is available on <a class="reference external" href="http://lai-api-test.dev.apps.eo4eu.eu/">LAI API</a></p>
+<p>The documentation of this API is available on <a class="reference external" href="http://lai-api-test.dev.apps.eo4eu.eu/docs">LAI API</a></p>
 <section id="lai-api-endpoints">
 <h3>LAI API Endpoints<a class="headerlink" href="#lai-api-endpoints" title="Link to this heading">#</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">POST</span> <span class="pre">api/v1/lai/process</span></code></p>
@@ -469,7 +473,7 @@ Wide Swath Width: Each satellite has a swath width of 290 kilometers, allowing f
 <li><p>Foundation for Further Research: SAM can serve as a robust baseline for researchers developing new segmentation models or applications, fostering innovation and advancement in the field of computer vision.</p></li>
 <li><p>Enhanced Performance: SAM’s large-scale training and ability to generalize across diverse datasets contribute to its high performance, making it a reliable tool for complex segmentation tasks.</p></li>
 </ul>
-<p>The API of SAM is available on <a class="reference external" href="http://sam-api-test.dev.apps.eo4eu.eu">SAM API</a></p>
+<p>The documentation of SAM API is available on <a class="reference external" href="http://sam-api-test.dev.apps.eo4eu.eu/docs">SAM API</a></p>
 <section id="sam-api-endpoints">
 <h3>SAM API Endpoints<a class="headerlink" href="#sam-api-endpoints" title="Link to this heading">#</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">POST</span> <span class="pre">/api/v1/prompt</span></code></p>
@@ -491,7 +495,7 @@ Wide Swath Width: Each satellite has a swath width of 290 kilometers, allowing f
 <li><p>Urban Green Spaces: Detects recreational facilities such as baseball diamonds, tennis courts, basketball courts, ground-track fields, soccer fields, and swimming pools to monitor urban green spaces.</p></li>
 <li><p>Economic Activities: Identifies container cranes at ports to monitor economic activities.</p></li>
 </ul>
-<p>The object detection API is available on <a class="reference external" href="http://od-api-test.dev.apps.eo4eu.eu">Object detection API</a></p>
+<p>The documentation of object detection API is available on <a class="reference external" href="http://od-api-test.dev.apps.eo4eu.eu/docs">Object detection API</a></p>
 <section id="object-detection-api-endpoints">
 <h3>Object Detection API Endpoints<a class="headerlink" href="#object-detection-api-endpoints" title="Link to this heading">#</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">POST</span> <span class="pre">api/v1/yolov8/obb/detect</span></code></p>

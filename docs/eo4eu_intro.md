@@ -37,8 +37,8 @@ Check out the content pages bundled with this sample book to see more.
 
 ## EO4EU Use Cases
 
-- *EO for Personalized Health Care*: to expand mobile allergy and airbrone hazards forecasting
-- *Food Security*: to improve the adaptability of food production using EO4EU fpr live climate data tracking and analysis.
+- *EO for Personalized Health Care*: to expand mobile allergy and airbrone hazards forecasting.
+- *Food Security*: to improve the adaptability of food production using EO4EU for live climate data tracking and analysis.
 - *Soil Erosion*: to integrate rainfall datasets through EO4EU to assess soil suspectibility to water erosion.
 - *Civil Protection*: to improve disaster and calamity prevention and response using EO datasets.
 - *Ocean Monitoring*: to optimize shipping industry travel time across different oceans considering live weather data.

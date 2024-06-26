@@ -3,8 +3,12 @@
 
 format: jb-book
 root: eo4eu_intro
-chapters:
-  - file: instructions
-  - file: processing_apis
-  - file: crop_monitoring
-  - file: object_detection
+parts:
+  - caption: Getting Started
+    chapters:
+      - file: instructions
+      - file: processing_apis
+  - caption: Practical Use Cases
+    chapters:
+      - file: crop_monitoring
+      - file: object_detection
